@@ -2,13 +2,14 @@ body
 {
 	background-color:#FBFA9D;
 	font-family: serif;
+	position: relative;
+ 	min-height: 100%;
 }
 
 #bloc_page
 {
 	width: 95%;
 	margin: auto;
-	height: 100%;
 }
 
 #col1
