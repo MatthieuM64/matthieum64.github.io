@@ -8,6 +8,7 @@ body
 {
 	width: 95%;
 	margin: auto;
+	height: 100%;
 }
 
 #col1
@@ -15,7 +16,6 @@ body
 	width: 25%;
 	float: left;
 	background-color: white;
-	height:100%;
 } 
 
 #col2
