@@ -4,15 +4,20 @@ body
 	font-family: serif;
 }
 
+#bloc_page
+{
+	width: 95%;
+}
+
 #col1
 {
 	width: 25%;
 	float: left;
+	background-color: white;
 } 
 
 #col2
 {
 	width: 75%;
 	float: left;
-	background-color: white;
 } 
