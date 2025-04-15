@@ -3,3 +3,16 @@ body
 	background-color:#FBFA9D;
 	font-family: serif;
 }
+
+#col1
+{
+	width: 25%;
+	float: left;
+} 
+
+#col2
+{
+	width: 75%;
+	float: left;
+	background-color: white;
+} 
