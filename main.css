@@ -17,8 +17,9 @@ html, body
 .left
 {
 	background-color: #F0F080;
-	flex: 25%;
-	padding: 50px 20px;
+	flex: 20%;
+	padding: 20px 20px;
+	padding-top:60px;
 	float: left;
 }
 
@@ -31,7 +32,7 @@ html, body
 .left #logo
 {
 	height:35px;
-	margin:0px 10px;
+	margin:10px 10px;
 }
 
 .left #alllogos
@@ -42,7 +43,7 @@ html, body
 
 .right
 {
-	flex: 75%;
+	flex: 80%;
 	padding: 0px 20px;
 	float: left;
 }
