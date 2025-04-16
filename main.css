@@ -1,28 +1,66 @@
-body
+html, body
 {
+	height: 100%;
+	margin: 0;
 	background-color:#FBFA9D;
 	font-family: serif;
-	position: relative;
- 	height: 100%;
 }
 
-#bloc_page
+.bloc_page
 {
-	width: 95%;
+	display: flex;
+	width:95%;
+	min-height: 100vh; /* toute la hauteur de la fenêtre */
 	margin: auto;
-	min-height: 100%;
-}
 }
 
-#col1
+.left
 {
-	width: 25%;
+	background-color: #F0F080;
+	flex: 25%;
+	padding: 50px 20px;
 	float: left;
-	background-color: white;
-} 
+}
 
-#col2
+.left #Photo
 {
-	width: 75%;
+	text-align:center;
+	vertical-align: top;
+}
+
+.left #logo
+{
+	height:35px;
+	margin:0px 10px;
+}
+
+.left #alllogos
+{
+	text-align:center;
+	margin:20px;
+}
+
+.right
+{
+	flex: 75%;
+	padding: 0px 20px;
 	float: left;
-} 
+}
+
+.right h1
+{
+	font-size:30px;
+	text-align:center;
+}
+
+.right h2
+{
+	font-size:20px;
+}
+
+.right p
+{
+	font-size:14px;
+	text-align:justify;
+	margin:7px 10px;
+}
