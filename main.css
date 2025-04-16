@@ -65,3 +65,39 @@ html, body
 	text-align:justify;
 	margin:7px 10px;
 }
+
+.right a
+{
+	font-size:14px;
+	color:blue;
+	text-decoration:none;
+	font-style: normal;
+	font-weight:normal;
+}
+
+.right a:hover
+{
+	font-size:14px;
+	color:blue;
+	text-decoration:none;
+	font-style: italic;
+	font-weight:normal;
+}
+
+.right a:visited
+{
+	font-size:14px;
+	color:blue;
+	text-decoration:none;
+	font-style: normal;
+	font-weight:normal;
+}
+
+.right a:visited:hover
+{
+	font-size:14px;
+	color:blue;
+	text-decoration:none;
+	font-style: italic;
+	font-weight:normal;
+}
