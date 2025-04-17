@@ -1,14 +1,6 @@
-html, body
-{
-	height: 100%;
-	margin: 0;
-	background-color:#FBFA9D;
-	font-family: serif;
-}
+/*FOR DESKTOP*/
 
-
-
-@media all and (min-width:1000px)
+@media all and (min-width:1001px)
 {
 
 .bloc_page
@@ -47,9 +39,58 @@ html, body
 	float: left;
 }
 
+.left h1
+{
+	font-size:28px;
+	text-align:center;
+	background-color: #F0F080;
+	margin: 0px 0px;
+	padding: 15px 0px;
 }
 
-@media all and (max-width: 1000px)
+.left #Photo
+{
+	text-align:center;
+	vertical-align: top;
+}
+
+.left #Photo img
+{
+	width:80%;
+}
+
+.left #alllogos
+{
+	text-align:center;
+	padding:10px 20px;
+}
+
+.left #logo
+{
+	height:35px;
+	margin:10px 10px;
+}
+
+.right h2
+{
+	font-size:24px;
+	margin:10px 20px;
+	font-style: normal;
+	color:black;
+}
+
+.right p
+{
+	font-size:14px;
+	text-align:justify;
+	margin:10px 30px;
+}
+
+}
+
+/*FOR TABS*/
+
+@media all and (min-width:801px) and (max-width: 1000px)
 {
 
 .bloc_page
@@ -61,7 +102,9 @@ html, body
 .left
 {
 	background-color: #F0F080;
-	width: 100%;
+	height:100%;
+	/*min-height: 100vh;*/
+	padding: 0px 0px;
 }
 
 .right
@@ -71,33 +114,142 @@ html, body
 	padding: 0px 0px;
 }
 
+.left h1
+{
+	font-size:4.66vw;
+	text-align:center;
+	background-color: #F0F080;
+	margin: 0px 0px;
+	padding: 20px 0px;
 }
 
 .left #Photo
 {
 	text-align:center;
 	vertical-align: top;
+	padding:0px 0px;
 }
 
-.left #logo
+.left #Photo img
 {
-	height:35px;
-	margin:10px 10px;
+	width:70%;
 }
+
 
 .left #alllogos
 {
 	text-align:center;
-	padding:20px;
+	padding:10px 7.5%;
+}
+
+.left #logo
+{
+	height:6.66vw;
+	margin:10px 10px;
+}
+
+.right h2
+{
+	font-size:4vw;
+	margin:10px 20px;
+	font-style: normal;
+	color:black;
+}
+
+.right p
+{
+	font-size:2.33vw;
+	text-align:justify;
+	margin:10px 30px;
+}
+
+}
+
+/*FOR MOBILES*/
+
+@media all and (max-width: 800px)
+{
+
+.bloc_page
+{
+	width:100%;
+	margin: auto;
+}
+
+.left
+{
+	background-color: #F0F080;
+	height:100%;
+	/*min-height: 100vh;*/
+	padding: 0px 0px;
+}
+
+.right
+{
+	background-color:#FBFA9D;
+	width: 100%;
+	padding: 0px 0px;
 }
 
 .left h1
 {
-	font-size:28px;
+	font-size:7vw;
 	text-align:center;
 	background-color: #F0F080;
 	margin: 0px 0px;
 	padding: 20px 0px;
+}
+
+.left #Photo
+{
+	text-align:center;
+	vertical-align: top;
+	padding:0px 0px;
+}
+
+.left #Photo img
+{
+	width:70%;
+}
+
+
+.left #alllogos
+{
+	text-align:center;
+	padding:10px 7.5%;
+}
+
+.left #logo
+{
+	height:10vw;
+	margin:10px 10px;
+}
+
+.right h2
+{
+	font-size:6vw;
+	margin:10px 20px;
+	font-style: normal;
+	color:black;
+}
+
+.right p
+{
+	font-size:3.5vw;
+	text-align:justify;
+	margin:10px 30px;
+}
+
+}
+
+/*COMMON PROPERTIES*/
+
+html, body
+{
+	height: 100%;
+	margin: 0;
+	background-color:#FBFA9D;
+	font-family: serif;
 }
 
 .right #skills
@@ -130,24 +282,8 @@ html, body
 	padding:1px 0px;
 }
 
-.right h2
-{
-	font-size:24px;
-	margin:10px 20px;
-	font-style: normal;
-	color:black;
-}
-
-.right p
-{
-	font-size:14px;
-	text-align:justify;
-	margin:10px 30px;
-}
-
 .right a
 {
-	font-size:14px;
 	color:blue;
 	text-decoration:none;
 	font-style: normal;
@@ -156,7 +292,6 @@ html, body
 
 .right a:hover
 {
-	font-size:14px;
 	color:blue;
 	text-decoration:none;
 	font-style: italic;
@@ -165,7 +300,6 @@ html, body
 
 .right a:visited
 {
-	font-size:14px;
 	color:blue;
 	text-decoration:none;
 	font-style: normal;
@@ -174,7 +308,6 @@ html, body
 
 .right a:visited:hover
 {
-	font-size:14px;
 	color:blue;
 	text-decoration:none;
 	font-style: italic;
