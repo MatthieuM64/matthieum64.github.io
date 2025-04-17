@@ -282,6 +282,13 @@ html, body
 	padding:1px 0px;
 }
 
+.right #abstract
+{
+	font-style: italic;
+	font-size:12px;
+	cursor: pointer;
+}
+
 .right a
 {
 	color:blue;
