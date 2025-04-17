@@ -88,15 +88,12 @@ html, body
 	padding:1px 0px;
 }
 
-.right #button
-{
-	cursor: pointer;
-}
-
 .right h2
 {
 	font-size:25px;
 	margin:10px 20px;
+	font-style: normal;
+	color:black;
 }
 
 .right p
