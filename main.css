@@ -6,6 +6,11 @@ html, body
 	font-family: serif;
 }
 
+
+
+@media all and (min-width:1000px)
+{
+
 .bloc_page
 {
 	display: flex;
@@ -25,9 +30,47 @@ html, body
 	box-sizing: border-box;
 	overflow-y: auto;
 		
-	padding: 20px 20px;
-	padding-top:77px;
+	padding: 0px 20px;
 	float: left;
+}
+
+.right
+{
+	background-color:#FBFA9D;
+	
+	width: 75%;
+	min-height: 100vh;
+	box-sizing: border-box;
+	
+	margin-left: 26.5%;
+	padding: 0px 0px;
+	float: left;
+}
+
+}
+
+@media all and (max-width: 1000px)
+{
+
+.bloc_page
+{
+	width:100%;
+	margin: auto;
+}
+
+.left
+{
+	background-color: #F0F080;
+	width: 100%;
+}
+
+.right
+{
+	background-color:#FBFA9D;
+	width: 100%;
+	padding: 0px 0px;
+}
+
 }
 
 .left #Photo
@@ -45,25 +88,12 @@ html, body
 .left #alllogos
 {
 	text-align:center;
-	margin:20px;
+	padding:20px;
 }
 
-.right
+.left h1
 {
-	background-color:#FBFA9D;
-	
-	flex: 75%;
-	min-height: 100vh;
-	box-sizing: border-box;
-	
-	margin-left: 26.5%;
-	padding: 0px 0px;
-	float: left;
-}
-
-.right h1
-{
-	font-size:30px;
+	font-size:28px;
 	text-align:center;
 	background-color: #F0F080;
 	margin: 0px 0px;
@@ -102,7 +132,7 @@ html, body
 
 .right h2
 {
-	font-size:25px;
+	font-size:24px;
 	margin:10px 20px;
 	font-style: normal;
 	color:black;
