@@ -8,11 +8,13 @@
 </head>
 <body>
 
+<script>
+function showOnClick(node) { if (node.style.display === "none") { node.style.display = "block"; } else { node.style.display = "none"; } }
+</script>
+
 <div class="bloc_page">
 
 <div class="left">
-
-<h1> </h1>
 
 <div id='Photo'> 
 <img src="mangeat.jpg" alt="photo mangeat matthieu" width="90%" />
@@ -35,6 +37,8 @@
 
 <h1>Matthieu Mangeat, PhD</h1>
 
+<div id="skills">
+
 <h2>Professional Skills</h2>
 
 <p><b>Scientific research area:</b> Nonequilibrium statistical physics (dispersion of particles in complex media, optical trapping of nanoparticles, sedimentation of active matter, and flocking dynamics of active spins), applications of statistical physics to biology (search strategies, first passage times, intracellular transport, and cytoskeleton organization), glass transition and disordered systems.</p>
@@ -48,6 +52,10 @@
 <p><b>Scientific softwares:</b> Mathematica, Maple, Gnuplot, FlexPDE, FreeFem++, Zotero.</p>
 
 <p><b>Other softwares:</b> LibreOffice, LATEX, Beamer, Inkscape.</p>
+
+</div>
+
+<div id="shortcv">
 
 <h2>Short C.V.</h2>
 
@@ -66,51 +74,117 @@
 <p>2009-2012: Classe Préparatoire aux Grandes Écoles (intensive courses equivalent to Bachelor’s two first years) Physics and Chemistry, at Lycée René Cassin (Bayonne, France).</p>
 <p>2009: <b>Baccalauréat S</b> (equivalent to A levels in Mathematics, Physics, and Chemistry).</p>
 
-<h2>Scientific Publications</h2>
+</div>
 
-<p>[19] M. Mangeat, S. Chatterjee, J. D. Noh, and H. Rieger, <i>Emergent complex phases in a discrete flocking model with reciprocal and non-reciprocal interactions</i>, submitted (2024) <a href="https://arxiv.org/abs/2412.02501" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/TSAIM2024" target="_blank" style="">[gitHub]</a> <a href="https://mangeatm.fr/papers/mangeat_chatterjee_2024_emergent.pdf" target="_blank">[pdf]</a>.</p>
+<div id="publications">
 
-<p>[18] M. Mangeat, S. Chakraborty, A. Wysocki, and H. Rieger, <a href="https://doi.org/10.1103/PhysRevE.109.014616" title="doi:10.1103/PhysRevE.109.014616" target="_blank"><i>Stationary particle currents in sedimenting active matter wetting a wall</i></a>, Phys. Rev. E, <b>109</b>, 014616 (2024) <a href="https://arxiv.org/abs/2309.09714" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/ABP2023" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/mangeat_chakraborty_2023_stationary.pdf" target="_blank">[pdf]</a>.</p>
+<h2 id="button" onclick='showOnClick(publi)' title='show/hide the publication list'>Scientific Publications</h2>
 
-<p>[17] M. Karmakar, S. Chatterjee, M. Mangeat, H. Rieger, and R. Paul, <a href="https://doi.org/10.1103/PhysRevE.108.014604" title="doi:10.1103/PhysRevE.108.014604" target="_blank"><i>Jamming and flocking in the restricted active Potts model</i></a>, Phys. Rev. E <b>108</b>, 014604 (2023) <a href="https://arxiv.org/abs/2212.10251" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/RAPM2023" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/karmakar_chatterjee_2022_jamming.pdf" target="_blank">[pdf]</a>.</p>
+<div id='publi' style='display: none'>
 
-<p>[16] S. Chatterjee, M. Mangeat, C.-U. Woo, H. Rieger, and J. D. Noh, <a href="https://doi.org/10.1103/PhysRevE.107.024607" title="doi:10.1103/PhysRevE.107.024607" target="_blank"><i>Flocking of two unfriendly species: The two-species Vicsek model</i></a>, Phys. Rev. E <b>107</b>, 024607 (2023) <a href="https://arxiv.org/abs/2211.10494" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/TSVM2022" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/chatterjee_mangeat_2022_flocking.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[19]</b> M. Mangeat, S. Chatterjee, J. D. Noh, and H. Rieger, <i>Emergent complex phases in a discrete flocking model with reciprocal and non-reciprocal interactions</i>, submitted (2024) <a href="https://arxiv.org/abs/2412.02501" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/TSAIM2024" target="_blank" style="">[gitHub]</a> <a href="https://mangeatm.fr/papers/mangeat_chatterjee_2024_emergent.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[15] S. Chatterjee, M. Mangeat, and H. Rieger, <a href="https://doi.org/10.1209/0295-5075/ac6e4b" title="doi:10.1209/0295-5075/ac6e4b" target="_blank"><i>Polar flocks with discretized directions: the active clock model approaching the Vicsek model</i></a>, EPL <b>138</b>, 41001 (2022) <a href="https://arxiv.org/abs/2203.01181" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/ACM2022" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/chatterjee_mangeat_2022_polar.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[18]</b> M. Mangeat, S. Chakraborty, A. Wysocki, and H. Rieger, <a href="https://doi.org/10.1103/PhysRevE.109.014616" title="doi:10.1103/PhysRevE.109.014616" target="_blank"><i>Stationary particle currents in sedimenting active matter wetting a wall</i></a>, Phys. Rev. E, <b>109</b>, 014616 (2024) <a href="https://arxiv.org/abs/2309.09714" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/ABP2023" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/mangeat_chakraborty_2023_stationary.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[14] A. Alexandre, M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1103/PhysRevLett.128.210601" title="doi:10.1103/PhysRevLett.128.210601" target="_blank"><i>How Stickiness Can Speed Up Diffusion in Confined Systems</i></a>, Phys. Rev. Lett. <b>128</b>, 210601 (2022) <a href="https://arxiv.org/abs/2112.05532" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/alexandre_mangeat_2021_stickiness.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[17]</b> M. Karmakar, S. Chatterjee, M. Mangeat, H. Rieger, and R. Paul, <a href="https://doi.org/10.1103/PhysRevE.108.014604" title="doi:10.1103/PhysRevE.108.014604" target="_blank"><i>Jamming and flocking in the restricted active Potts model</i></a>, Phys. Rev. E <b>108</b>, 014604 (2023) <a href="https://arxiv.org/abs/2212.10251" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/RAPM2023" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/karmakar_chatterjee_2022_jamming.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[13] M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1088/1742-5468/ac3907" title="doi:10.1088/1742-5468/ac3907" target="_blank"><i>Steady state of overdamped particles in the non-conservative force field of a simple non-linear model of optical trap</i></a>, J. Stat. Mech. <b>2021</b>, 113205 (2021) <a href="https://arxiv.org/abs/2110.04362" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_guerin_2021_steady.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[16]</b> S. Chatterjee, M. Mangeat, C.-U. Woo, H. Rieger, and J. D. Noh, <a href="https://doi.org/10.1103/PhysRevE.107.024607" title="doi:10.1103/PhysRevE.107.024607" target="_blank"><i>Flocking of two unfriendly species: The two-species Vicsek model</i></a>, Phys. Rev. E <b>107</b>, 024607 (2023) <a href="https://arxiv.org/abs/2211.10494" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/TSVM2022" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/chatterjee_mangeat_2022_flocking.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[12] M. Mangeat and H. Rieger, <a href="https://doi.org/10.1103/PhysRevE.104.044124" title="doi:10.1103/PhysRevE.104.044124" target="_blank"><i>Narrow escape problem in two-shell spherical domains</i></a>, Phys. Rev. E <b>104</b>, 044124 (2021) <a href="https://arxiv.org/abs/2104.13125" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/NEP2021" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/mangeat_rieger_2021_narrow.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[15]</b> S. Chatterjee, M. Mangeat, and H. Rieger, <a href="https://doi.org/10.1209/0295-5075/ac6e4b" title="doi:10.1209/0295-5075/ac6e4b" target="_blank"><i>Polar flocks with discretized directions: the active clock model approaching the Vicsek model</i></a>, EPL <b>138</b>, 41001 (2022) <a href="https://arxiv.org/abs/2203.01181" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/ACM2022" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/chatterjee_mangeat_2022_polar.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[11] M. Mangeat, S. Chatterjee, R. Paul, and H. Rieger, <a href="https://doi.org/10.1103/PhysRevE.102.042601" title="doi:10.1103/PhysRevE.102.042601" target="_blank"><i>Flocking with a q-fold discrete symmetry: band-to-lane transition in the active Potts model</i></a>, Phys. Rev. E <b>102</b>, 042601 (2020) <a href="https://arxiv.org/abs/2007.14875" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/APM2020" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/mangeat_chatterjee_2020_flocking.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[14]</b> A. Alexandre, M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1103/PhysRevLett.128.210601" title="doi:10.1103/PhysRevLett.128.210601" target="_blank"><i>How Stickiness Can Speed Up Diffusion in Confined Systems</i></a>, Phys. Rev. Lett. <b>128</b>, 210601 (2022) <a href="https://arxiv.org/abs/2112.05532" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/alexandre_mangeat_2021_stickiness.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[10] S. Chatterjee, M. Mangeat, R. Paul, and H. Rieger, <a href="https://doi.org/10.1209/0295-5075/130/66001" title="doi:10.1209/0295-5075/130/66001" target="_blank"><i>Flocking and re-orientation transition in the 4-state active Potts model</i></a>, EPL <b>130</b>, 66001 (2020) <a href="https://arxiv.org/abs/1911.13067" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/APM2020" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/chatterjee_mangeat_2020_flocking.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[13]</b> M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1088/1742-5468/ac3907" title="doi:10.1088/1742-5468/ac3907" target="_blank"><i>Steady state of overdamped particles in the non-conservative force field of a simple non-linear model of optical trap</i></a>, J. Stat. Mech. <b>2021</b>, 113205 (2021) <a href="https://arxiv.org/abs/2110.04362" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_guerin_2021_steady.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[09] M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1063/5.0009095" title="doi:10.1063/5.0009095" target="_blank"><i>Effective diffusivity of Brownian particles in a two dimensional square lattice of hard disks</i></a>, J. Chem. Phys. <b>152</b>, 234109 (2020) <a href="https://arxiv.org/abs/2111.04354" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_guerin_2020_effective.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[12]</b> M. Mangeat and H. Rieger, <a href="https://doi.org/10.1103/PhysRevE.104.044124" title="doi:10.1103/PhysRevE.104.044124" target="_blank"><i>Narrow escape problem in two-shell spherical domains</i></a>, Phys. Rev. E <b>104</b>, 044124 (2021) <a href="https://arxiv.org/abs/2104.13125" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/NEP2021" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/mangeat_rieger_2021_narrow.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[08] M. Mangeat and H. Rieger, <a href="https://doi.org/10.1088/1751-8121/ab4348" title="doi:10.1088/1751-8121/ab4348" target="_blank"><i>The narrow escape problem in a circular domain with radial piecewise constant diffusivity</i></a>, J. Phys. A: Math. Theor. <b>52</b>, 424002 (2019) <a href="https://arxiv.org/abs/1906.06975" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/NEP2021" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/mangeat_rieger_2019_narrow.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[11]</b> M. Mangeat, S. Chatterjee, R. Paul, and H. Rieger, <a href="https://doi.org/10.1103/PhysRevE.102.042601" title="doi:10.1103/PhysRevE.102.042601" target="_blank"><i>Flocking with a q-fold discrete symmetry: band-to-lane transition in the active Potts model</i></a>, Phys. Rev. E <b>102</b>, 042601 (2020) <a href="https://arxiv.org/abs/2007.14875" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/APM2020" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/mangeat_chatterjee_2020_flocking.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[07] M. Mangeat, Y. Amarouchene, Y. Louyer, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1103/PhysRevE.99.052107" title="doi:10.1103/PhysRevE.99.052107" target="_blank"><i>Role of nonconservative scattering forces and damping on Brownian particles in optical traps</i></a>, Phys. Rev. E <b>99</b>, 052107 (2019) <a href="https://arxiv.org/abs/1812.09188" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_amarouchene_2019_role.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[10]</b> S. Chatterjee, M. Mangeat, R. Paul, and H. Rieger, <a href="https://doi.org/10.1209/0295-5075/130/66001" title="doi:10.1209/0295-5075/130/66001" target="_blank"><i>Flocking and re-orientation transition in the 4-state active Potts model</i></a>, EPL <b>130</b>, 66001 (2020) <a href="https://arxiv.org/abs/1911.13067" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/APM2020" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/chatterjee_mangeat_2020_flocking.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[06] Y. Amarouchene, M. Mangeat, B. Vidal Montes, L. Ondic, T. Guérin, D. S. Dean, and Y. Louyer, <a href="https://doi.org/10.1103/PhysRevLett.122.183901" title="doi:10.1103/PhysRevLett.122.183901" target="_blank"><i>Nonequilibrium Dynamics Induced by Scattering Forces for Optically Trapped Nanoparticles in Strongly Inertial Regimes</i></a>, Phys. Rev. Lett. <b>122</b>, 183901 (2019) <a href="https://arxiv.org/abs/1812.06804" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/amarouchene_mangeat_2019_nonequilibrium.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[09]</b> M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1063/5.0009095" title="doi:10.1063/5.0009095" target="_blank"><i>Effective diffusivity of Brownian particles in a two dimensional square lattice of hard disks</i></a>, J. Chem. Phys. <b>152</b>, 234109 (2020) <a href="https://arxiv.org/abs/2111.04354" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_guerin_2020_effective.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[PhD] M. Mangeat, <a href="https://tel.archives-ouvertes.fr/tel-01947335/" title="tel-01947335" target="_blank"><i>De la dispersion aux vortex browniens dans des systèmes hors-équilibres confinés</i></a>, Thèse de doctorat, Université de Bordeaux (2018) <a href="https://mangeatm.fr/papers/mangeat_2018_dispersion.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[08]</b> M. Mangeat and H. Rieger, <a href="https://doi.org/10.1088/1751-8121/ab4348" title="doi:10.1088/1751-8121/ab4348" target="_blank"><i>The narrow escape problem in a circular domain with radial piecewise constant diffusivity</i></a>, J. Phys. A: Math. Theor. <b>52</b>, 424002 (2019) <a href="https://arxiv.org/abs/1906.06975" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/NEP2021" target="_blank">[gitHub]</a> <a href="https://mangeatm.fr/papers/mangeat_rieger_2019_narrow.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[05] M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1063/1.5045183" title="doi:10.1063/1.5045183" target="_blank"><i>Dispersion in two-dimensional periodic channels with discontinuous profiles</i></a>, J. Chem. Phys. <b>149</b>, 124105 (2018) <a href="https://arxiv.org/abs/1807.05366" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_guerin_2018_dispersion.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[07]</b> M. Mangeat, Y. Amarouchene, Y. Louyer, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1103/PhysRevE.99.052107" title="doi:10.1103/PhysRevE.99.052107" target="_blank"><i>Role of nonconservative scattering forces and damping on Brownian particles in optical traps</i></a>, Phys. Rev. E <b>99</b>, 052107 (2019) <a href="https://arxiv.org/abs/1812.09188" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_amarouchene_2019_role.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[04] M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1088/1742-5468/aa9bb5" title="doi:10.1088/1742-5468/aa9bb5" target="_blank"><i>Dispersion in two dimensional channels — the Fick-Jacobs approximation revisited</i></a>, J. Stat. Mech. <b>2017</b>, 123205 (2017) <a href="https://arxiv.org/abs/1710.02699" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_guerin_2017_dispersion.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[06]</b> Y. Amarouchene, M. Mangeat, B. Vidal Montes, L. Ondic, T. Guérin, D. S. Dean, and Y. Louyer, <a href="https://doi.org/10.1103/PhysRevLett.122.183901" title="doi:10.1103/PhysRevLett.122.183901" target="_blank"><i>Nonequilibrium Dynamics Induced by Scattering Forces for Optically Trapped Nanoparticles in Strongly Inertial Regimes</i></a>, Phys. Rev. Lett. <b>122</b>, 183901 (2019) <a href="https://arxiv.org/abs/1812.06804" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/amarouchene_mangeat_2019_nonequilibrium.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[03] M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1209/0295-5075/118/40004" title="doi:10.1209/0295-5075/118/40004" target="_blank"><i>Geometry controlled dispersion in periodic corrugated channels</i></a>, EPL <b>118</b>, 40004 (2017) <a href="https://arxiv.org/abs/1709.03722" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_guerin_2017_geometry.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[PhD]</b> M. Mangeat, <a href="https://tel.archives-ouvertes.fr/tel-01947335/" title="tel-01947335" target="_blank"><i>De la dispersion aux vortex browniens dans des systèmes hors-équilibres confinés</i></a>, Thèse de doctorat, Université de Bordeaux (2018) <a href="https://mangeatm.fr/papers/mangeat_2018_dispersion.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[02] X. Zhou, R. Zhao, K. Schwarz, M. Mangeat, E. C. Schwarz, M. Hamed, I. Bogeski, V. Helms, H. Rieger, and B. Qu, <a href="https://doi.org/10.1038/srep44357" title="doi:10.1038/srep44357" target="_blank"><i>Bystander cells enhance NK cytotoxic efficiency by reducing search time</i></a>, Scientific Reports <b>7</b>, 44357 (2017) <a href="https://mangeatm.fr/papers/zhou_zhao_2017_bystander.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[05]</b> M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1063/1.5045183" title="doi:10.1063/1.5045183" target="_blank"><i>Dispersion in two-dimensional periodic channels with discontinuous profiles</i></a>, J. Chem. Phys. <b>149</b>, 124105 (2018) <a href="https://arxiv.org/abs/1807.05366" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_guerin_2018_dispersion.pdf" target="_blank">[pdf]</a>.</p>
 
-<p>[01] M. Mangeat and F. Zamponi, <a href="https://doi.org/10.1103/PhysRevE.93.012609" title="doi:10.1103/PhysRevE.93.012609" target="_blank"><i>Quantitative approximation schemes for glasses</i></a>, Phys. Rev. E <b>93</b>, 012609 (2016) <a href="https://arxiv.org/abs/1510.03808" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_zamponi_2016_quantitative.pdf" target="_blank">[pdf]</a>.</p>
+<p><b>[04]</b> M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1088/1742-5468/aa9bb5" title="doi:10.1088/1742-5468/aa9bb5" target="_blank"><i>Dispersion in two dimensional channels — the Fick-Jacobs approximation revisited</i></a>, J. Stat. Mech. <b>2017</b>, 123205 (2017) <a href="https://arxiv.org/abs/1710.02699" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_guerin_2017_dispersion.pdf" target="_blank">[pdf]</a>.</p>
 
-<h2>Scientific Conferences and Seminars</h2>
+<p><b>[03]</b> M. Mangeat, T. Guérin, and D. S. Dean, <a href="https://doi.org/10.1209/0295-5075/118/40004" title="doi:10.1209/0295-5075/118/40004" target="_blank"><i>Geometry controlled dispersion in periodic corrugated channels</i></a>, EPL <b>118</b>, 40004 (2017) <a href="https://arxiv.org/abs/1709.03722" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_guerin_2017_geometry.pdf" target="_blank">[pdf]</a>.</p>
 
-<h2>Teaching</h2>
+<p><b>[02]</b> X. Zhou, R. Zhao, K. Schwarz, M. Mangeat, E. C. Schwarz, M. Hamed, I. Bogeski, V. Helms, H. Rieger, and B. Qu, <a href="https://doi.org/10.1038/srep44357" title="doi:10.1038/srep44357" target="_blank"><i>Bystander cells enhance NK cytotoxic efficiency by reducing search time</i></a>, Scientific Reports <b>7</b>, 44357 (2017) <a href="https://mangeatm.fr/papers/zhou_zhao_2017_bystander.pdf" target="_blank">[pdf]</a>.</p>
+
+<p><b>[01]</b> M. Mangeat and F. Zamponi, <a href="https://doi.org/10.1103/PhysRevE.93.012609" title="doi:10.1103/PhysRevE.93.012609" target="_blank"><i>Quantitative approximation schemes for glasses</i></a>, Phys. Rev. E <b>93</b>, 012609 (2016) <a href="https://arxiv.org/abs/1510.03808" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_zamponi_2016_quantitative.pdf" target="_blank">[pdf]</a>.</p>
+
+</div>
+
+</div>
+
+<div id="conferences">
+
+<h2 id="button" onclick='showOnClick(conf)' title='show/hide the conference list'>Scientific Conferences and Seminars</h2>
+
+<div id='conf' style='display: none'>
+
+<p><b>[20]</b> <a href="https://www.dpg-verhandlungen.de/year/2025/conference/regensburg/part/dy/session/3/contribution/4" target="_blank">DPG Meeting of the Condensed Matter Section - Regensburg 2025</a>, University of Regensburg (Germany), March 2025, Emergent phases in a discrete flocking model with reciprocal interaction (talk).</p>
+
+<p><b>[19]</b> <a href="https://www.dpg-verhandlungen.de/year/2024/conference/berlin/part/dy/session/43/contribution/10" target="_blank">DPG Meeting of the Condensed Matter Section - Berlin 2024</a>, TU Berlin (Germany), March 2024, Stationary particle currents in sedimenting active matter wetting a wall (talk).</p>
+
+<p><b>[18]</b> <a href="https://www.dpg-verhandlungen.de/year/2024/conference/berlin/part/dy/session/32/contribution/13" target="_blank">DPG Meeting of the Condensed Matter Section - Berlin 2024</a>, TU Berlin (Germany), March 2024, Flocking of two unfriendly species (poster).</p>
+
+<p><b>[17]</b> <a href="http://www.cell-physics.uni-saarland.de/" target="_blank">Cell Physics 2023</a>, Saarland University (Saarbrücken, Germany), October 2023 (attendee).</p>
+
+<p><b>[16]</b> <a href="https://www.dpg-verhandlungen.de/year/2023/conference/skm/part/dy/session/42/contribution/10" target="_blank">DPG Meeting of the Condensed Matter Section - Dresden 2023</a>, TU Dresden (Germany), March 2023, <i>Wetting of reflecting plates by an active Brownian fluid</i> (poster).</p>
+
+<p><b>[15]</b> <a href="https://www.dpg-verhandlungen.de/year/2023/conference/skm/part/dy/session/10/contribution/2" target="_blank">DPG Meeting of the Condensed Matter Section - Dresden 2023</a>, TU Dresden (Germany), March 2023, <i>Polar flocks with discretized directions: the active clock model approaching the Vicsek model</i> (talk).</p>
+
+<p><b>[14]</b> <a href="https://www.dpg-verhandlungen.de/year/2022/conference/regensburg/part/dy/session/46/contribution/22" target="_blank">DPG Meeting of the Condensed Matter Section - Regensburg 2022</a>, University of Regensburg (Germany), September 2022, <i>Polar flocks with discretized directions: the active clock model approaching the Vicsek model</i> (poster).</p>
+
+<p><b>[13]</b> <a href="http://www.cell-physics.uni-saarland.de/" target="_blank">Cell Physics 2021</a>, Saarland University (Saarbrücken, Germany), September 2021 (attendee).</p>
+
+<p><b>[12]</b> <a href="https://www.dpg-verhandlungen.de/year/2021/conference/bpcppdysoe/part/dy/session/32/contribution/14" target="_blank">Virtual DPG Spring Meeting 2021</a>, online, March 2021, <i>The narrow escape problem in two-shell circular domains</i> (poster).</p>
+
+<p><b>[11]</b> <a href="https://www.dpg-verhandlungen.de/year/2021/conference/bpcppdysoe/part/dy/session/12/contribution/10" target="_blank">Virtual DPG Spring Meeting 2021</a>, online, March 2021, <i>Flocking and reorientation transition in the q-state active Potts model</i> (poster).
+
+<p><b>[10]</b> <a href="http://lptms.u-psud.fr/seminars/seminaire-du-lptms-matthieu-mangeat-saarland-university/" target="_blank">Seminar</a>, Laboratoire de Physique Théorique et Modèles Statistiques (Orsay, France, online), January 2021, <i>Flocking and reorientation transition in the q-state active Potts model</i> (talk).</p>
+
+<p><b>[09]</b> <a href="https://www.lpt.ups-tlse.fr/spip.php?article1542" target="_blank">Seminar</a>, Laboratoire de Physique Théorique (Toulouse, France, online), December 2020, <i>Flocking and reorientation transition in the q-state active Potts model</i> (talk).</p>
+
+<p><b>[08]</b> <a href="https://www.fz-juelich.de/ibi/ibi-5/EN/Leistungen/SPP1726/International-Conference-2020/_node.html" target="_blank">Microswimmers International Conference 2020: Motile Active Matter</a>, Forschungszentrum caesar (Bonn, Germany, online), October 2020, <i>Flocking and reorientation transition in the q-state active Potts model</i> (poster).</p>
+
+<p><b>[07]</b> <a href="https://www.cecam.org/workshop-details/87/" target="_blank">Frontiers in Computational Methods for Active Matter</a>, Centre Européen de Calcul Atomique et Moléculaire (Lausanne, Switzerland), February 2020, <i>Flocking and reorientation transition in the 4-state active Potts model</i> (poster).</p>
+
+<p><b>[06]</b> <a href="http://www.cell-physics.uni-saarland.de/" target="_blank">Cell Physics 2019</a>, Saarland University (Saarbrücken, Germany), October 2019, <i>The narrow escape problem in a circular domain with radial piecewise constant diffusivity</i> (talk).</p>
+
+<p><b>[05]</b> <a href="https://www.dpg-verhandlungen.de/year/2019/conference/regensburg/part/dy/session/43/contribution/9" target="_blank">DPG Spring Meeting of the Condensed Matter Section - Regensburg 2019</a>, University of Regensburg (Germany), April 2019, <i>Controlled dispersion in periodic microchannels and regular obstacle parks</i> (talk).</p>
+
+<p><b>[04]</b> <a href="https://www.loma.cnrs.fr/loma-theory-day-2018/" target="_blank">LOMA Theory Day 2018</a>, Bordeaux University (Talence, France), May 2018, <i>Geometry controlled dispersion in periodic channels</i> (talk).</p>
+
+<p><b>[03]</b> Seminar, Saarland University (Saarbrücken, Germany), April 2018, <i>Geometry controlled dispersion in periodic channels</i> (talk).</p>
+
+<p><b>[02]</b> <a href="https://jstat.phys.ens.fr" target="_blank">Journées de Physique Statistique 2018</a>, ESPCI (Paris, France), January 2018, <i>Dispersion in periodic channels</i> (talk).</p>
+
+<p><b>[01]</b> <a href="https://fpspxiv.sciencesconf.org/" target="_blank">International Summer School "Fundamental Problems in Statistical Physics XIV"</a>, Bruneck (Italy), July 2017, <i>Geometry controlled dispersion in periodic corrugated channels</i> (poster).</p>
+
+</div>
+
+</div>
+
+<div id="researchtopics">
+
+<h2 id="button" onclick='showOnClick(research)' title='show/hide the research topics'>Research Topics</h2>
+
+<div id='research' style='display: none'>
+
+</div>
+
+</div>
 
 </div>
 </div>

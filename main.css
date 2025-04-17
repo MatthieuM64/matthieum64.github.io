@@ -9,7 +9,7 @@ html, body
 .bloc_page
 {
 	display: flex;
-	width:95%;
+	width:85%;
 	min-height: 100vh; /* toute la hauteur de la fenêtre */
 	margin: auto;
 }
@@ -17,9 +17,9 @@ html, body
 .left
 {
 	background-color: #F0F080;
-	flex: 20%;
+	flex: 25%;
 	padding: 20px 20px;
-	padding-top:60px;
+	padding-top:77px;
 	float: left;
 }
 
@@ -43,8 +43,9 @@ html, body
 
 .right
 {
-	flex: 80%;
-	padding: 0px 20px;
+	background-color:#FBFA9D;
+	flex: 75%;
+	padding: 0px 0px;
 	float: left;
 }
 
@@ -52,18 +53,57 @@ html, body
 {
 	font-size:30px;
 	text-align:center;
+	background-color: #F0F080;
+	margin: 0px 0px;
+	padding: 20px 0px;
+}
+
+.right #skills
+{
+	background-color: #FBFABD;
+	padding:1px 0px;
+}
+
+.right #shortcv
+{
+	background-color: #FBFA9D;
+	padding:1px 0px;
+}
+
+.right #publications
+{
+	background-color: #FBFABD;
+	padding:1px 0px;
+}
+
+.right #conferences
+{
+	background-color: #FBFA9D;
+	padding:1px 0px;
+}
+
+.right #researchtopics
+{
+	background-color: #FBFABD;
+	padding:1px 0px;
+}
+
+.right #button
+{
+	cursor: pointer;
 }
 
 .right h2
 {
-	font-size:20px;
+	font-size:25px;
+	margin:10px 20px;
 }
 
 .right p
 {
 	font-size:14px;
 	text-align:justify;
-	margin:7px 10px;
+	margin:10px 30px;
 }
 
 .right a
