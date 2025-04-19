@@ -46,6 +46,15 @@
 	background-color: #F0F080;
 	margin: 0px 0px;
 	padding: 15px 0px;
+	padding-bottom:5px;
+}
+
+.left p
+{
+	font-size:14px;
+	font-style: italic;
+	text-align:center;
+	margin:10px 10px;
 }
 
 .left #Photo
@@ -121,6 +130,15 @@
 	background-color: #F0F080;
 	margin: 0px 0px;
 	padding: 20px 0px;
+	padding-bottom:5px;
+}
+
+.left p
+{
+	font-size:2.33vw;
+	font-style: italic;
+	text-align:center;
+	margin:10px 10px;
 }
 
 .left #Photo
@@ -198,6 +216,15 @@
 	background-color: #F0F080;
 	margin: 0px 0px;
 	padding: 20px 0px;
+	padding-bottom:5px;
+}
+
+.left p
+{
+	font-size:3.5vw;
+	font-style: italic;
+	text-align:center;
+	margin:10px 10px;
 }
 
 .left #Photo
@@ -211,7 +238,6 @@
 {
 	width:70%;
 }
-
 
 .left #alllogos
 {
