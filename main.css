@@ -9,6 +9,7 @@
 	width:85%;
 	min-height: 100vh; /* toute la hauteur de la fenêtre */
 	margin: auto;
+	margin-bottom:20px;
 }
 
 .left
@@ -281,31 +282,31 @@ html, body
 .right #skills
 {
 	background-color: #FBFABD;
-	padding:1px 0px;
+	padding:5px 0px;
 }
 
 .right #shortcv
 {
 	background-color: #FBFA9D;
-	padding:1px 0px;
+	padding:5px 0px;
 }
 
 .right #publications
 {
 	background-color: #FBFABD;
-	padding:1px 0px;
+	padding:5px 0px;
 }
 
 .right #conferences
 {
 	background-color: #FBFA9D;
-	padding:1px 0px;
+	padding:5px 0px;
 }
 
 .right #researchtopics
 {
 	background-color: #FBFABD;
-	padding:1px 0px;
+	padding:5px 0px;
 }
 
 .right #abstract
