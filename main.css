@@ -90,6 +90,13 @@
 	color:black;
 }
 
+.right #logo
+{
+	height:24px;
+	margin:0px 10px;
+	margin-bottom:-2.4px;
+}
+
 .right p
 {
 	font-size:14px;
@@ -187,6 +194,13 @@
 	color:black;
 }
 
+.right #logo
+{
+	height:4vw;
+	margin:0px 10px;
+	margin-bottom:-0.4vw;
+}
+
 .right p
 {
 	font-size:2.33vw;
@@ -281,6 +295,13 @@
 	margin:10px 20px;
 	font-style: normal;
 	color:black;
+}
+
+.right #logo
+{
+	height:6vw;
+	margin:0px 10px;
+	margin-bottom:-0.6vw;
 }
 
 .right p
