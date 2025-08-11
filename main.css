@@ -367,7 +367,35 @@ html, body
 	font-style: italic;
 }
 
-.right a
+.right h2 a
+{
+	color:black;
+	text-decoration:none;
+	font-style: normal;
+}
+
+.right h2 a:hover
+{
+	color:black;
+	text-decoration:none;
+	font-style: normal;
+}
+
+.right h2 a:visited
+{
+	color:black;
+	text-decoration:none;
+	font-style: normal;
+}
+
+.right h2 a:visited:hover
+{
+	color:black;
+	text-decoration:none;
+	font-weight:normal;
+}
+
+.right p a
 {
 	color:blue;
 	text-decoration:none;
@@ -375,7 +403,7 @@ html, body
 	font-weight:normal;
 }
 
-.right a:hover
+.right p a:hover
 {
 	color:blue;
 	text-decoration:none;
@@ -383,7 +411,7 @@ html, body
 	font-weight:normal;
 }
 
-.right a:visited
+.right p a:visited
 {
 	color:blue;
 	text-decoration:none;
@@ -391,7 +419,7 @@ html, body
 	font-weight:normal;
 }
 
-.right a:visited:hover
+.right p a:visited:hover
 {
 	color:blue;
 	text-decoration:none;
