@@ -85,7 +85,6 @@
 .right h2
 {
 	font-size:24px;
-	margin:10px 20px;
 	font-style: normal;
 	color:black;
 }
@@ -189,7 +188,6 @@
 .right h2
 {
 	font-size:4vw;
-	margin:10px 20px;
 	font-style: normal;
 	color:black;
 }
@@ -292,7 +290,6 @@
 .right h2
 {
 	font-size:6vw;
-	margin:10px 20px;
 	font-style: normal;
 	color:black;
 }
@@ -362,37 +359,28 @@ html, body
 	padding:5px 0px;
 }
 
+.right .content
+{
+	padding-top: 1px;
+	margin-top: -10px;
+}
+
 .right span:hover
 {
 	font-style: italic;
 }
 
-.right h2 a
+.right .titles
 {
 	color:black;
+	cursor: pointer;
 	text-decoration:none;
 	font-style: normal;
 }
 
-.right h2 a:hover
+.right h2
 {
-	color:black;
-	text-decoration:none;
-	font-style: normal;
-}
-
-.right h2 a:visited
-{
-	color:black;
-	text-decoration:none;
-	font-style: normal;
-}
-
-.right h2 a:visited:hover
-{
-	color:black;
-	text-decoration:none;
-	font-weight:normal;
+	margin: 10px 20px;
 }
 
 .right p a

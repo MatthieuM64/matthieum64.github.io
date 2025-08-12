@@ -10,7 +10,95 @@
 <body>
 
 <script>
-function showOnClick(node) { if (node.style.display === "none") { node.style.display = "block"; } else { node.style.display = "none"; } }
+// Smooth scroll to a Y position with ease-out
+function smoothScrollTo(targetY, duration) {
+  const start = window.scrollY;
+  const distance = targetY - start;
+  const startTime = performance.now();
+
+  function step(now) {
+    const t = Math.min((now - startTime) / duration, 1);
+    const eased = t * (2 - t); // ease-out
+    const y = Math.round(start + distance * eased);
+    window.scrollTo(0, y);
+    if (t < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function animateHeight(el, from, to, duration, done) {
+  // prevent overlapping animations
+  if (el.dataset.animating === '1') return;
+  el.dataset.animating = '1';
+  el.style.willChange = 'height';
+  el.style.contain = 'layout';
+
+  const t0 = performance.now();
+
+  function step(now) {
+    const t = Math.min((now - t0) / duration, 1);
+    const eased = t * (2 - t); // ease-out
+    const next = from + (to - from) * eased;
+    el.style.height = Math.round(next) + 'px';
+    if (t < 1) {
+      requestAnimationFrame(step);
+    } else {
+      el.dataset.animating = '';
+      el.style.willChange = '';
+      el.style.contain = '';
+      if (typeof done === 'function') done();
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+function expand(el, duration) {
+  el.style.display = 'block';
+  el.style.overflow = 'hidden';
+  
+  const mt = parseFloat(getComputedStyle(el).marginTop) || 0;
+  const startH = mt < 0 ? -mt : 0;
+  el.style.height = startH + 'px';
+  void el.offsetHeight;
+
+  const target = el.scrollHeight; // measure after display:block
+  animateHeight(el, startH, target, duration, () => {
+    el.style.height = 'auto'; // allow natural growth later
+    el.style.overflow = '';
+  });
+}
+
+function collapse(el, duration) {
+  const start = el.scrollHeight;
+  el.style.overflow = 'hidden';
+  el.style.height = start + 'px';
+  
+  const mt = parseFloat(getComputedStyle(el).marginTop) || 0;
+  const stop = mt < 0 ? -mt : 0;
+
+  animateHeight(el, start, stop, duration, () => {
+    el.style.display = 'none';
+    el.style.height = '';
+    el.style.overflow = '';
+  });
+}
+
+// Your click handler (keeps your original API: showOnClick(title, node))
+function showOnClick(title, node) {
+  const DURATION = 1800;
+  const marginTop = parseFloat(getComputedStyle(title).marginTop) || 0;
+  if (node.style.display === "none") {
+    expand(node, DURATION);
+    requestAnimationFrame(() => smoothScrollTo(title.offsetTop - marginTop, DURATION));
+  } else {
+    collapse(node, DURATION);
+    smoothScrollTo(title.offsetTop-marginTop, DURATION);
+  }
+}
+
+
+
+
 function showAbstract(node) { var text = node.nextSibling; if (text.style.display === "none") { node.style.display = "none"; text.style.display = "block"; }}
 function hideAbstract(node) { var text = node.previousSibling; if (text.style.display === "none") { node.style.display = "none"; text.style.display = "inline"; }}
 function showLinks(node) { var text = node.nextSibling; if (text.style.display === "none") { node.style.display = "none"; text.style.display = "inline"; }}
@@ -48,6 +136,8 @@ function showLinks(node) { var text = node.nextSibling; if (text.style.display =
 
 <h2>Professional Skills</h2>
 
+<div class='content'>
+
 <p><b>Scientific research area:</b> Nonequilibrium statistical physics (dispersion of particles in complex media, optical trapping of nanoparticles, sedimentation of active matter, and flocking dynamics of active spins), applications of statistical physics to biology (search strategies, first passage times, intracellular transport, and cytoskeleton organization), glass transition and disordered systems.</p>
 
 <p><b>Technics:</b> Analytical solutions of physical problems, numerical solutions of equations with the finite elements method (with FreeFem++), and numerical simulations of stochastic and molecular dynamics (with C++ and OpenMP).</p>
@@ -62,9 +152,13 @@ function showLinks(node) { var text = node.nextSibling; if (text.style.display =
 
 </div>
 
+</div>
+
 <div id="shortcv">
 
 <h2>Short C.V. <a href="CV.pdf" title="CV" target="_blank"><img id="logo" src="icon/PDF.svg" alt="CV"></a></h2>
+
+<div class='content'>
 
 <p><b>2018-2024: Postdoc</b> in the group of H. Rieger, at Saarland University, Saarbrücken, Germany. Research work on the sedimentation of active matter, flocking dynamics of active spins, and intracellular transport times, participation in writing the lecture notes, and group webpage manager.</p>
 
@@ -83,11 +177,13 @@ function showLinks(node) { var text = node.nextSibling; if (text.style.display =
 
 </div>
 
+</div>
+
 <div id="publications">
 
-<h2><a href="#publications" onclick='showOnClick(publi)' title='show/hide the publication list'>Scientific Publications</a> <a href="publist.pdf" title="publist" target="_blank"><img id="logo" src="icon/PDF.svg" alt="publist"></a></h2>
+<h2 class="titles" href="#publications" onclick='showOnClick(this,publi)' title="show/hide the publication list">Scientific Publications<a href="publist.pdf" title="publication list" onclick="event.stopPropagation()" target="_blank"><img id="logo" src="icon/PDF.svg" alt="publist"></a></h2>
 
-<div id='publi' style='display: none'>
+<div class='content' id='publi' style='display: none'>
 
 <p><b>[21]</b> S. Chatterjee, M. Karmakar, M. Mangeat, H. Rieger, and R. Paul, <i>Stability of discrete-symmetry flocks: sandwich state, traveling domains and motility-induced pinning</i>, submitted (2025).
 <span onclick="showLinks(this)" title="Show links" style='color:blue; cursor: pointer;'>[links]</span><span id="links" style='display: none'><a href="https://arxiv.org/abs/2507.08187" target="_blank">[arXiv:2507.08187]</a> <a href="https://doi.org/10.5281/zenodo.15813520" target="_blank" style="">[movies]</a> <a href="https://mangeatm.fr/papers/chatterjee_karmakar_2025_stability.pdf" target="_blank">[pdf]</a></span>
@@ -183,9 +279,9 @@ function showLinks(node) { var text = node.nextSibling; if (text.style.display =
 
 <div id="conferences">
 
-<h2><a href="#conferences" onclick='showOnClick(conf)' title='show/hide the conference list'>Scientific Conferences and Seminars</a></h2>
+<h2 class="titles" href="#conferences" onclick='showOnClick(this,conf)' title="show/hide the conference list">Scientific Conferences and Seminars</h2>
 
-<div id='conf' style='display: none'>
+<div class='content' id='conf' style='display: none'>
 
 <p><b>[21]</b> The 29th international conference on Statistical Physics (StatPhys29), Florence, July 2025, Emergent phases in a discrete flocking model with non-reciprocal interaction (poster). <a href="https://statphys29.org/" target="_blank">[link]</a> <a href="https://mangeatm.fr/conferences/posterNRTSAIM.pdf" target="_blank">[pdf]</a> <span onclick="showAbstract(this)" title="Show abstract" style='color:blue; cursor: pointer;'>[abstract]</span><span id="abstract" onclick="hideAbstract(this)" title="Hide abstract" style='display: none'><b>Abstract:</b> Non-reciprocal interactions arise in systems that seemingly violate Newton’s third law “actio=reactio”. They are ubiquitous in active and living systems that break detailed balance at the microscale, from social forces to antagonistic inter-species interactions in bacteria. Non-reciprocity affects non-equilibrium phase transitions and pattern formation in active matter and represents a rapidly growing research focus in the field. In this work, we have undertaken a comprehensive study of the non-reciprocal two-species active Ising model (NRTSAIM), a non-reciprocal discrete-symmetry counterpart of the continuous-symmetry two-species Vicsek model [PRE 107, 024607 (2023)]. Our study uncovers a distinctive run-and-chase dynamical state that emerges under significant non-reciprocal frustration. In this state, A-particles chase B-particles to align with them, while B-particles avoid A-particles, resulting in B-particle accumulation at the opposite end of the advancing A-band. This run-and-chase state represents a non-reciprocal discrete-symmetry analog of the chiral phase seen in the non-reciprocal Vicsek model [Nature 592, 363 (2021)]. Additionally, we find that self-propulsion destroys the oscillatory state obtained for the non-motile case, and all the NRTSAIM steady-states are metastable due to spontaneous droplet excitation and exhibit motility-induced interface pinning. A hydrodynamic theory supports our simulations and confirms the reported phase diagrams.</span></p>
 
@@ -236,9 +332,9 @@ with a higher effective diffusivity in a region close to the cell boundary due t
 
 <div id="researchtopics">
 
-<h2><a href="#researchtopics" onclick='showOnClick(research)' title='show/hide the research topics'>Research Topics</a></h2>
+<h2 class="titles" href="#researchtopics" onclick='showOnClick(this,research)' title="show/hide the research topics">Research Topics</h2>
 
-<div id='research' style='display: none'>
+<div class='content' id='research' style='display: none'>
 
 <p><b>Multispecies flocking and non-reciprocal interactions.</b></p>
 
