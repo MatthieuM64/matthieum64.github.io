@@ -280,6 +280,24 @@ function showLinks(node) { var text = node.nextSibling; if (text.style.display =
 <span onclick="showLinks(this)" title="Show links" style='color:blue; cursor: pointer;'>[links]</span><span id="links" style='display: none'><a href="https://doi.org/10.1103/PhysRevE.93.012609" title="doi:10.1103/PhysRevE.93.012609" target="_blank">[doi]</a> <a href="https://arxiv.org/abs/1510.03808" title="arXiv:1510.03808" target="_blank">[arXiv]</a> <a href="https://mangeatm.fr/papers/mangeat_zamponi_2016_quantitative.pdf" target="_blank">[pdf]</a></span>
 <span onclick="showAbstract(this)" title="Show abstract" style='color:blue; cursor: pointer;'>[abstract]</span><span id="abstract" onclick="hideAbstract(this)" title="Hide abstract" style='display: none'><b>Abstract:</b> By means of a systematic expansion around the infinite-dimensional solution, we obtain an approximation scheme to compute properties of glasses in low dimensions. The resulting equations take as input the thermodynamic and structural properties of the equilibrium liquid, and from this they allow one to compute properties of the glass. They are therefore similar in spirit to the Mode Coupling approximation scheme. Our scheme becomes exact, by construction, in dimension d&rarr;&infin;, and it can be improved systematically by adding more terms in the expansion.</span></p>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div id="citations"><canvas id="citationsChart"></canvas></div>
+
+<script>
+const year = [2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
+const citations = [10,13,21,21,31,42,51,79,88,81];
+
+const ctx = document.getElementById('citationsChart');
+new Chart(ctx, {
+    type: 'bar',
+    data: { labels: year, datasets: [{label: 'Citations', data: citations }] },
+    options: { responsive: true, maintainAspectRatio: false, scales: {
+            x: { title: { display: true, text: 'Year', font: { weight: 'bold' } }, grid: {display: false } },
+            y: { beginAtZero: true, title: { display: true, text: 'Citations', font: { weight: 'bold' } }, ticks: { stepSize: 20, precision: 0 } } },
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(context) { return context.raw + ' citations'; } } } } }
+});
+</script>
+
 </div>
 
 </div>
