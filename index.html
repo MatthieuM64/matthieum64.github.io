@@ -288,15 +288,19 @@ const year=[2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
 const citations=[2,10,13,21,21,31,42,51,79,88,81];
 const totalCitations=citations.reduce((sum, value) => sum + value, 0);
 
+const citationsDiv = document.getElementById('citations');
+Chart.defaults.font.family = getComputedStyle(citationsDiv).fontFamily;
+Chart.defaults.font.size = parseFloat(getComputedStyle(citationsDiv).fontSize);
+
 const ctx = document.getElementById('citationsChart');
 new Chart(ctx, {
     type: 'bar',
     data: { labels: year, datasets: [{label: 'Citations', data: citations, backgroundColor: 'rgba(240, 240, 40, 0.7)', borderColor: 'rgb(160, 160, 0)', borderWidth: 1.,
     		hoverBackgroundColor: 'rgba(255, 255, 0, 1)', hoverBorderColor: 'rgb(0, 0, 0)', hoverBorderWidth: 1.5, barPercentage: 0.8, categoryPercentage: 0.8 }] },
-    options: { responsive: true, maintainAspectRatio: false, scales: {
-            x: { title: { display: true, text: 'Year', font: { weight: 'bold' } }, grid: {display: false } },
-            y: { beginAtZero: true, title: { display: true, text: 'Citations', font: { weight: 'bold' } }, ticks: { stepSize: 20, precision: 0 } } },
-    plugins: { title: { display: true, text: 'Total: ' + totalCitations + ' citations', font: { weight: 'bold' } }, legend: { display: false }, tooltip: { callbacks: { label: function(context) { return context.raw + ' citations'; } } } } }
+    options: { color: '#000', responsive: true, maintainAspectRatio: false, scales: {
+            x: { title: { display: true, text: 'Year', color: '#000', font: { weight: 'bold' } }, ticks: { color: '#000' }, grid: {display: false } },
+            y: { beginAtZero: true, title: { display: true, text: 'Citations', color: '#000', font: { weight: 'bold' } }, ticks: { color: '#000', stepSize: 20, precision: 0 } } },
+    plugins: { title: { display: true, text: 'Total: ' + totalCitations + ' citations', color: '#000', font: { weight: 'bold' } }, legend: { display: false }, tooltip: { callbacks: { label: function(context) { return context.raw + ' citations'; } } } } }
 });
 </script>
 
