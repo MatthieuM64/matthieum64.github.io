@@ -291,7 +291,8 @@ const totalCitations=citations.reduce((sum, value) => sum + value, 0);
 const ctx = document.getElementById('citationsChart');
 new Chart(ctx, {
     type: 'bar',
-    data: { labels: year, datasets: [{label: 'Citations', data: citations }] },
+    data: { labels: year, datasets: [{label: 'Citations', data: citations, backgroundColor: 'rgba(240, 240, 40, 0.7)', borderColor: 'rgb(160, 160, 0)', borderWidth: 1.,
+    		hoverBackgroundColor: 'rgba(255, 255, 0, 1)', hoverBorderColor: 'rgb(0, 0, 0)', hoverBorderWidth: 1.5, barPercentage: 0.8, categoryPercentage: 0.8 }] },
     options: { responsive: true, maintainAspectRatio: false, scales: {
             x: { title: { display: true, text: 'Year', font: { weight: 'bold' } }, grid: {display: false } },
             y: { beginAtZero: true, title: { display: true, text: 'Citations', font: { weight: 'bold' } }, ticks: { stepSize: 20, precision: 0 } } },
