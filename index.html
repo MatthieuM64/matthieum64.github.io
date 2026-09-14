@@ -182,7 +182,7 @@ function showLinks(node) { var text = node.nextSibling; if (text.style.display =
 
 <div class='content' id='publi' style='display: none'>
 
-<p>Below, you will find the publications for which I am a co-author, listed in reverse chronological order of their submission/publication in peer-reviewed journals (5 letters, 17 articles, and 1 preprint). New submissions are announced after their submission on <a href="https://arxiv.org/a/mangeat_m_1.html" title="my arXiv page" target="_blank">arXiv</a>. In summary, I have published two letters in <i>Physical Review Letters</i>, three letters in <i>Europhysics Letters</i>, one article in <i>Communications Physics</i>, one article in <i>Scientific Reports</i>, ten articles in <i>Physical Review E</i>, two articles in <i>Journal of Chemical Physics</i>, two articles in <i>Journal of Statistical Mechanics : Theory and Experiment</i>, and one article in <i>Journal of Physics A : Mathematical and Theoretical</i>.</p>
+<p>Below, you will find the publications for which I am a co-author, listed in reverse chronological order of their submission/publication in peer-reviewed journals (5 letters, 18 articles, and 0 preprint). New submissions are announced after their submission on <a href="https://arxiv.org/a/mangeat_m_1.html" title="my arXiv page" target="_blank">arXiv</a>. In summary, I have published two letters in <i>Physical Review Letters</i>, three letters in <i>Europhysics Letters</i>, one article in <i>Communications Physics</i>, one article in <i>Scientific Reports</i>, eleven articles in <i>Physical Review E</i>, two articles in <i>Journal of Chemical Physics</i>, two articles in <i>Journal of Statistical Mechanics : Theory and Experiment</i>, and one article in <i>Journal of Physics A : Mathematical and Theoretical</i>.</p>
 
 <p><b>[23]</b> A. K. Dutta, M. Mangeat, S. Chatterjee, and R. Paul, <i>Stability and breakdown of chiral motion in nonreciprocal flocking</i>, Phys. Rev. E <b>114</b>, 034115 (2026).
 <span onclick="showLinks(this)" title="Show links" style='color:blue; cursor: pointer;'>[links]</span><span id="links" style='display: none'><a href="https://doi.org/10.1103/yz2d-wk6g" title="doi:10.1103/yz2d-wk6g" target="_blank">[doi]</a> <a href="https://arxiv.org/abs/2604.18125" title="arXiv:2604.18125" target="_blank">[arXiv]</a> <a href="https://github.com/MatthieuM64/NRTSVM2026" target="_blank" style="">[gitHub]</a> <a href="https://doi.org/10.5281/zenodo.19388130" target="_blank" style="">[movies]</a> <a href="https://mangeatm.fr/papers/dutta_chatterjee_2026_stability.pdf" target="_blank">[pdf]</a></span>
@@ -284,8 +284,9 @@ function showLinks(node) { var text = node.nextSibling; if (text.style.display =
 <div id="citations"><canvas id="citationsChart"></canvas></div>
 
 <script>
-const year = [2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
-const citations = [10,13,21,21,31,42,51,79,88,81];
+const year=[2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
+const citations=[2,10,13,21,21,31,42,51,79,88,81];
+const totalCitations=citations.reduce((sum, value) => sum + value, 0);
 
 const ctx = document.getElementById('citationsChart');
 new Chart(ctx, {
@@ -294,7 +295,7 @@ new Chart(ctx, {
     options: { responsive: true, maintainAspectRatio: false, scales: {
             x: { title: { display: true, text: 'Year', font: { weight: 'bold' } }, grid: {display: false } },
             y: { beginAtZero: true, title: { display: true, text: 'Citations', font: { weight: 'bold' } }, ticks: { stepSize: 20, precision: 0 } } },
-    plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(context) { return context.raw + ' citations'; } } } } }
+    plugins: { title: { display: true, text: 'Total: ' + totalCitations + ' citations', font: { weight: 'bold' } }, legend: { display: false }, tooltip: { callbacks: { label: function(context) { return context.raw + ' citations'; } } } } }
 });
 </script>
 
