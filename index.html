@@ -284,8 +284,24 @@ function showLinks(node) { var text = node.nextSibling; if (text.style.display =
 <div id="citations"><canvas id="citationsChart"></canvas></div>
 
 <script>
-const year=[2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
-const citations=[2,10,13,21,21,31,42,51,79,88,81];
+async function loadCitations() {
+const response=await fetch('/database/citations.csv');
+const text=await response.text();
+
+const year=[];
+const citations=[];
+
+text.trim().split('\n').forEach(line => { const [y, c] = line.trim().split('\t'); year.push(parseInt(y)); citations.push(parseInt(c)); });
+
+year.reverse();
+citations.reverse();
+
+return { year, citations }; }
+
+async function main() {
+//const year=[2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
+//const citations=[2,10,13,21,21,31,42,51,79,88,81];
+const { year, citations } = await loadCitations();
 const totalCitations=citations.reduce((sum, value) => sum + value, 0);
 
 const citationsDiv = document.getElementById('citations');
@@ -301,7 +317,9 @@ new Chart(ctx, {
             x: { title: { display: true, text: 'Year', color: '#000', font: { weight: 'bold' } }, ticks: { color: '#000' }, grid: {display: false } },
             y: { beginAtZero: true, title: { display: true, text: 'Citations', color: '#000', font: { weight: 'bold' } }, ticks: { color: '#000', stepSize: 20, precision: 0 } } },
     plugins: { title: { display: true, text: 'Total: ' + totalCitations + ' citations', color: '#000', font: { weight: 'bold' } }, legend: { display: false }, tooltip: { callbacks: { label: function(context) { return context.raw + ' citations'; } } } } }
-});
+}); }
+
+main();
 </script>
 
 </div>
