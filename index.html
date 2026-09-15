@@ -286,6 +286,7 @@ function showLinks(node) { var text = node.nextSibling; if (text.style.display =
 <script>
 async function loadCitations() {
 const response=await fetch('https://mangeatm.fr/database/citations.csv');
+if (!response.ok) { throw new Error('HTTP error ' + response.status); }
 const text=await response.text();
 
 const year=[];
